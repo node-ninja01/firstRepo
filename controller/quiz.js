@@ -84,7 +84,7 @@ class Quiz {
             let quizId  = +req.params.quizId;
             if(!quizId ) {
                 return  res.status(400).json(Message.MISSING_KEYS);
-            } else if(typeof quizId == "number"){
+            } else if(typeof quizId != "number"){
                 return res.status(400).json(Message.INVALID_KEY);
             }
     
